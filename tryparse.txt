@@ -1,0 +1,39 @@
+//to string
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		//tostring and convert.tostring
+		int x = 1;
+		string y = null;
+		
+		string z=Convert.ToString(y);
+		Console.ReadLine();
+	}
+}
+------------------------------------------------------------------------------------------------------------
+//try_parse......a number is integer or not
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("enter the string:");
+		String s=Console.ReadLine();
+		int result;
+		int.TryParse(s,out result);
+		if(result>0)
+		{
+			Console.WriteLine("you entered the number:" +result);
+		}
+		else
+		{
+			Console.WriteLine("it is not a number");
+		}
+	}
+}
+
+------------------------------------------------------------------------------------------------------
