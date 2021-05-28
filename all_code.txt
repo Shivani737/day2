@@ -1,0 +1,562 @@
+//Transpose of matrix
+using System;
+public class Day2 {
+   public static void Main() {
+      int i, j, m, n;
+      int[, ] arr1 = new int[30, 30];
+      int[, ] arr2 = new int[30, 30];
+
+ 
+
+      Console.Write("\nEnter the number of rows and columns of the matrix :\n");
+      Console.Write("Rows entered = ");
+      m = Convert.ToInt32(Console.ReadLine());
+
+ 
+
+      Console.Write("Columns entered = ");
+      n = Convert.ToInt32(Console.ReadLine());
+
+ 
+
+      Console.Write("Set elements in the matrix...\n");
+      for (i = 0; i < m; i++) {
+         for (j = 0; j < n; j++) {
+            Console.Write("\n [{0}],[{1}] : ", i, j);
+            arr1[i, j] = Convert.ToInt32(Console.ReadLine());
+         }
+      }
+
+ 
+
+      Console.Write("\n\nMatrix before Transpose:\n");
+      for (i = 0; i < m; i++) {
+         Console.Write("\n");
+         for (j = 0; j < n; j++)
+         Console.Write("{0}\t", arr1[i, j]);
+      }
+
+ 
+
+      for (i = 0; i < m; i++) {
+         for (j = 0; j < n; j++) {
+
+ 
+
+            arr2[j, i] = arr1[i, j];
+         }
+      }
+
+ 
+
+      Console.Write("\n\nMatrix after Transpose: ");
+      for (i = 0; i < m; i++) {
+         Console.Write("\n");
+         for (j = 0; j < n; j++) {
+            Console.Write("{0}\t", arr2[i, j]);
+         }
+      }
+      Console.Write("\n\n");
+   }
+}
+
+
+--------------------------------------------------------------------------------
+//multiplication of 2D matrix
+
+using System;
+
+ 
+
+class Program {
+  static void Main() {
+    int [,]arr =new int [2,2];
+    int [,]arr1 =new int [2,2];
+    int [,]arr2 =new int [2,2];
+    Console.Write("enter values for array 1 ");
+    for(int row=0;row<2;row++)
+    {
+        for(int col=0;col<2;col++)
+        {
+            arr[row,col]=Convert.ToInt32(Console.ReadLine());
+            
+        }
+    }
+     Console.Write("enter values for array 2 ");
+     for(int row=0;row<2;row++)
+    {
+        for(int col=0;col<2;col++)
+        {
+            arr1[row,col]=Convert.ToInt32(Console.ReadLine());
+            
+        }
+    }
+    
+    for(int row=0;row<2;row++)
+    {
+        for(int col=0;col<2;col++)
+        {
+            arr2[row,col]=arr[row,col]+arr1[row,col];
+            
+        }
+    }
+    Console.WriteLine("Array 1");
+     for(int row=0;row<2;row++)
+    {
+        for(int col=0;col<2;col++)
+        {
+            Console.Write(arr[row,col]+"\t");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine("Array 2");
+     for(int row=0;row<2;row++)
+    {
+        for(int col=0;col<2;col++)
+        {
+            Console.Write(arr1[row,col]+"\t");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine("sum of two arrays");
+     for(int row=0;row<2;row++)
+    {
+        for(int col=0;col<2;col++)
+        {
+            Console.Write(arr2[row,col]+"\t");
+        }
+        Console.WriteLine();
+    }
+   
+    
+  }
+}
+
+
+------------------------------------------------------------------------------------
+//Indentity matrix
+using System;
+
+class Program {
+  static void Main() {
+    int [,]arr =new int [2,2];
+    Console.Write("enter values for array ");
+    for(int row=0;row<2;row++)
+    {
+        for(int col=0;col<2;col++)
+        {
+            arr[row,col]=Convert.ToInt32(Console.ReadLine());
+            
+        }
+    }
+
+    Console.WriteLine("Array :");
+     for(int row=0;row<2;row++)
+    {
+        for(int col=0;col<2;col++)
+        {
+            Console.Write(arr[row,col]+"\t");
+        }
+        Console.WriteLine();
+    }
+     if((arr[0,0]==1&&arr[1,1]==1)&&(arr[0,1]==0&&arr[1,0]==0))
+         Console.WriteLine("The matrix is an identity matrix"); 
+    else
+        Console.WriteLine("Not an identity matrix"); 
+    
+  }
+}
+------------------------------------------------------------------------------------------------------------
+//jagged array
+int [][] jaggedArray = new int[2][];
+		
+		jaggedArray[0] = new int[2];
+	    jaggedArray[1] = new int[2];
+		
+       	jaggedArray[0] = new int[]{1,2};
+		jaggedArray[0] = new int[]{1,2};
+--------------------------------------------------------------------------------------------------------
+//Printing Jagged array
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string[][] Members = new string[2][]
+		{
+			new string[]{"Sam","Alex"},
+			new string[]{"Peter","Sonia","Ronnie"}
+		};
+		for (int i = 0; i< Members.Length; i++)
+		{
+			for (int j = 0; j < Members[i].Length; j++)
+			{
+				Console.Write(Members[i][j] + "\t");
+			}
+			Console.WriteLine();
+		}
+		Console.ReadLine();
+	}
+}
+
+-----------------------------------------------------------------------------------------------------------
+//var and dynamic keyword 
+using System;
+public class Program 
+  {
+  public  static void Main(string[] args)
+   {
+
+//const int i= 2;
+//var and dynamic keyword 
+//var i = "2";
+// var i = 2.200; 
+//i= Convert.ToInt32("3");
+
+dynamic i = 2;
+i = "Vikash";
+Console.WriteLine(i);
+Console.ReadLine();
+  }
+}
+------------------------------------------------------------------------------------------------------------
+//function
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int a=1, b=5;
+		int c=Sum(a,b);
+		Console.WriteLine(a+b);
+		Console.ReadLine();
+	}
+	public static int Sum(int a, int b)
+	{
+		return (a+b);
+	}
+}
+----------------------------------------------------------------------------------------------------------
+//using function sum_sub_mul_divide
+using System;
+                   
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Select you option \n 1. Add \n 2.sub \n 3.mul \n 4.division");
+        int op=Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter First number: ");
+        int a=Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter Second number: ");
+        int b=Convert.ToInt32(Console.ReadLine());
+        switch(op)
+        {
+            case 1:
+                int s=sum(a,b);
+                Console.WriteLine("Addition of Two numbers is: "+s);
+                break;
+            case 2:
+                int sb=sub(a,b);
+                Console.WriteLine("Substraction of 2 numbers is:"+sb);
+                break;
+            case 3:
+                int m=mul(a,b);
+                Console.WriteLine("Multiplication of two numbers:"+m);
+                break;
+            case 4:
+                int d=div(a,b);
+                Console.WriteLine("Division of two numbers: "+d);
+                break;
+            default:
+                Console.WriteLine("enter valid option");
+                break;
+        }
+    }
+    public static int sum(int a,int b)
+    {
+        return (a+b);
+    }
+        public static int sub(int a,int b)
+    {
+        return (a-b);
+    }
+        public static int mul(int a,int b)
+    {
+        return (a*b);
+    }
+        public static int div(int a,int b)
+    {
+        return (a/b);
+    }
+}
+-----------------------------------------------------------------------------------
+//swapping
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int a=5, b=7;
+		swap(a,b);
+		Console.WriteLine("Values in main function after Swapping");
+		Console.WriteLine("a= "+a + "b= "+b);
+		Console.ReadLine();
+	}
+	public static void swap(int a,int b)
+	{
+		int c=a;
+		a=b;
+		b=c;
+		Console.WriteLine("a= "+a+"b= "+b);
+	}
+	
+	
+}
+---------------------------------------------------------------------------------------------------------
+//Parameter (named,out)
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int a=5, b=8;
+		//named parameter
+		//swap(a:y, b:z, x:7);
+		//named of parameter in function : value
+		//Console.WriteLine("Values in main function after Swapping");
+		//Console.WriteLine("a= "+y + "b= "+z);
+		//Sum(a,b,out c);
+		Sum(a,b);
+	   Console.ReadLine();
+	}
+	public static void Sum(int a,int b=7)
+	{
+		Console.WriteLine(a+b);
+	}
+         public static void Sum1(int a,int b,out int c) //out_parameter
+		{
+			c =a+b;
+		}
+
+	
+}
+------------------------------------------------------------------------------------------------------------
+//ref parameter
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int a=5, b=7;
+		swap(ref a,ref b);
+		Console.WriteLine("Values in main function after Swapping");
+		Console.WriteLine("a= "+a + "b= "+b);
+		Console.ReadLine();
+	}
+	public static void swap(ref int a,ref int b)
+	{
+		int c=a;
+		a=b;
+		b=c;
+		Console.WriteLine("a= "+a+"b= "+b);
+	}
+	
+}
+-----------------------------------------------------------------------------------------------------------
+//Palindrome
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		 string s,revs="";  
+            Console.WriteLine(" Enter string");  
+            s = Console.ReadLine();  
+            for (int i = s.Length-1; i >=0; i--) //String Reverse  
+            {  
+                revs += s[i].ToString();  
+            }  
+            if (revs == s) // Checking whether string is palindrome or not  
+            {  
+                Console.WriteLine("String is Palindrome \n Entered String Was {0} and reverse string is {1}", s, revs);  
+            }  
+            else  
+            {  
+                Console.WriteLine("String is not Palindrome \n Entered String Was {0} and reverse string is {1}", s, revs);  
+            }  
+            Console.ReadLine();  
+	}
+}
+
+------------------------------------------------------------------------------------------------------------
+//palindrome_2
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.Write("Enter a string to Check Palindrome : ");
+            string name = Console.ReadLine();
+            string reverse = string.Empty;
+            
+            for (int i = name.Length - 1; i >= 0; i--)
+            {
+                reverse += name[i];
+            }
+            
+            if (name == reverse)
+            {
+                Console.WriteLine("it is Palindrome.");
+            }
+            else
+            {
+                Console.WriteLine("it is not Palindrome");
+            }
+            Console.ReadLine();
+	}
+}
+---------------------------------------------------------------------------------------------------------
+//count_no_of_vowels_in_string
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+
+        Console.WriteLine("Enter a Sentence");
+        string sentence = Console.ReadLine().ToLower();
+
+        for (int i = 0; i < sentence.Length; i++)
+        {
+            if (sentence.Contains("a") || sentence.Contains("e") || sentence.Contains("i") || sentence.Contains("o") || sentence.Contains("u"))
+          
+			{
+             Console.WriteLine("Your total number of vowels is: {0}");
+			}
+        Console.ReadLine();
+		}
+	}
+ }
+
+	
+-----------------------------------------------------------------------------------------------------------
+//upper_case_"i_love_my_india"
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+	string sample = "i love my india";
+char[] arr = sample.ToCharArray();
+for (int i = 0; i < sample.Length; i++)
+{
+if(i==0)
+{
+arr[i] = Convert.ToChar(sample[i].ToString().ToUpper());
+}
+else
+{
+if(sample[i]==' ')
+{
+arr[i+1] = Convert.ToChar(sample[i+1].ToString().ToUpper());
+}
+}
+}
+string output = new string(arr);
+Console.WriteLine("Input String is : " + sample);
+Console.WriteLine("Output String is : "+ output);
+Console.ReadLine();
+	}
+ }
+
+	
+-----------------------------------------------------------------------------------------------------------
+//i_love_my_india
+string sample = "i love my india";
+
+ string []sample1 = sample.Split(' ');
+string sample2=string.Empty;
+for (int i = 0; i < sample1.Length; i++)
+{
+if (sample1[i].Length > 1)
+{
+
+ sample2 = sample2 + " " + sample1[i].Substring(0, 1).ToUpper() + sample1[i].Substring(1, sample1[i].Length-1);
+}
+else
+{
+sample2 = sample2 + sample1[i].ToUpper();
+}
+}
+-----------------------------------------------------------------------------------------------------------
+//longest_palindromic_sunstring_from_given_string
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Day_2
+{
+class Class6
+{
+static void Main(string[] args)
+{
+Console.WriteLine("aaaaaabbbccc");
+Console.WriteLine(LongestPalindrome("aaaaaabbbccc"));
+Console.ReadLine();
+}
+
+ public static string LongestPalindrome(String s)
+{
+var charaaray = s.ToCharArray();
+var bool_arr = new bool[charaaray.Length, charaaray.Length];
+int longest_start = 0;
+int max_length = 1;
+for (int i = 0; i < charaaray.Length; i++)
+{
+bool_arr[i, i] = true;
+}
+for (int i = 0; i < charaaray.Length-1; i++)
+{
+if(charaaray[i]== charaaray[i + 1])
+{
+bool_arr[i, i + 1] = true;
+longest_start = i;
+max_length = 2;
+}
+}
+for (int length = 3; length <= charaaray.Length; length++)
+{
+for (int i = 0; i < charaaray.Length-length+1; i++)
+{
+int j = i + length - 1;
+if(charaaray[i] == charaaray[j] && bool_arr[i+1,j-1])
+{
+bool_arr[i, j] = true;
+if (max_length < (j - i))
+{
+max_length = j - i;
+longest_start = i;
+}
+}
+}
+}
+
+ return s.Substring(longest_start,max_length);
+}
+}
+}
+
+------------------------------------------------------------------------------------------------------------
